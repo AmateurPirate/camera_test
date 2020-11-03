@@ -47,7 +47,8 @@ lookup = defaultdict(str)
 
 for k, v in reverse_lookup.items():
     lookup[v] = k
-
+    
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 ret1 = cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280) #640
 ret2 = cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720) # 360
@@ -64,7 +65,6 @@ print()
 for i in range(1, 40):
     print(lookup[i], ': ', cap.get(i))
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 fourcc = cv2.VideoWriter_fourcc(*'MJPG')
 writer = cv2.VideoWriter('test_file.avi', fourcc, 120.0, (1280, 720), False)
