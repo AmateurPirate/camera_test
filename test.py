@@ -53,7 +53,7 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 ret1 = cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280) #640
 ret2 = cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720) # 360
 ret3 = cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 5) # was 0.25
-ret4 = cap.set(cv2.CAP_PROP_EXPOSURE, -11) # -5 == 2**-5 == 1/32 seconds
+ret4 = cap.set(cv2.CAP_PROP_EXPOSURE, -4) # -5 == 2**-5 == 1/32 seconds
 ret5 = cap.set(cv2.CAP_PROP_AUTOFOCUS, 0)
 ret6 = cap.set(cv2.CAP_PROP_BRIGHTNESS, 0.0)
 ret7 = cap.set(cv2.CAP_PROP_FPS, 150) # was 60
